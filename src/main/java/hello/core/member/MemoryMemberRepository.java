@@ -10,6 +10,10 @@ public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long,Member> store = new HashMap<>();
 
+    public Map<Long, Member> getStore() {
+        return store;
+    }
+
     @Override
     public void save(Member member) {
         store.put(member.getId(), member);

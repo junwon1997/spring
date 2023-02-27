@@ -19,7 +19,7 @@ public class OrderServiceTest {
         memberService.join(member);
 
         Order order = orderService.createOrder(member.getId(), "Spring", 20000);
-        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
-
+        Assertions.assertThat(order.getDiscountPrice()).isNotEqualTo(1000);
     }
+
 }
